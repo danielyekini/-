@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 // Definition for a binary tree node.
 class TreeNode {
     int val;
@@ -16,14 +13,18 @@ class TreeNode {
 }
 
 class Solution {
-    List<Integer> list = new ArrayList<>();
-    
-    public List<Integer> inorderTraversal(TreeNode root) {
-        if (root != null) {
-            inorderTraversal(root.left);
-            list.add(root.val);
-            inorderTraversal(root.right);
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) {
+            return null;
         }
-        return list;
+
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+        
+        if (root.left != null) {invertTree(root.left);}
+        if (root.right != null) {invertTree(root.right);}
+
+        return root;
     }
 }
