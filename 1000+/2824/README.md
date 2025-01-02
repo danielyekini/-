@@ -24,4 +24,4 @@ Naive Algo:
 
  */
 
- The idea here was to brute force the search and check every pair in the array that satisfies the condition. I used a fast slow pointer approach  with a O(n^2) time complexity and an O(1) space complexity
+The idea here was to brute force the search and check every pair in the array that satisfies the condition. I used a fast slow pointer approach  with a O(n^2) time complexity and an O(1) space complexity
